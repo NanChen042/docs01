@@ -15,7 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.69.7",
-    "vitepress": "1.0.0-rc.36"
+    "vitepress": "1.0.0-rc.36",
+    "vue": "^3.4.8"
   },
   "pnpm": {
     "peerDependencyRules": {

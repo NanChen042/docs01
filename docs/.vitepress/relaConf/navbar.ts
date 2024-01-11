@@ -30,14 +30,14 @@ export const nav: DefaultTheme.NavItem[] = [
       {
         text: '👶 HarmonyOS 4.0',
         link: '/column/harmony-os-4.0-series/HarmonyOS4.0系列——01、下载、安装、配置环境、搭建页面以及运行示例代码.md', // 表示docs/column/Travel/index.md
-        target: '_blank',
-        rel: 'sponsored'
+       /*  target: '_blank', */
+        /* rel: 'sponsored' */
       },
       {
-        text: '👶 Threejs',
+        text: '💦 Threejs',
         link: '/column/ThreeJS/three01场景搭建.md', // 表示docs/column/Travel/index.md
-        target: '_blank',
-        rel: 'sponsored'
+       /*  target: '_blank', */
+        /* rel: 'sponsored' */
       }
     ]
   },

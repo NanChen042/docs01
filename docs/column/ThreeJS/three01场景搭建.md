@@ -1,3 +1,9 @@
+---
+title: Docs with VitePress
+editLink: true
+---
+{{ $frontmatter.title }}
+
 # 速成Three.js——一、初识Three以及基础的前端场景搭建(结尾含源码)
 
 文章：

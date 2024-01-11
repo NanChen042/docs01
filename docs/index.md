@@ -32,17 +32,21 @@ features:
   - icon: 🤹♀️
     title: 前端开发
     details: 小厂程序猿，国内某不知名互联网厂搬砖。
-    link: /column/Travel/harmony-os-4.0-series/
+    
   - icon: 👩🎨
     title: 学习语言
     details: HarmonyOS4.0、Typescript、JavaScript、HTML、CSS、Vue、WebGL
   - icon: 🧩
     title: 青年成功之道
     details: 真正的成功不在于你得到了什么，而是在于你成为了什么样的人。
+  - icon: 🧱
+    title: 好用的让你根本停不下来的工具
+    details: 噢耶！这也太好用了吧！！
+    link: /nav/index
+    
 ---
 <!-- 自定义组件 -->
-<script setup lang="ts">
-
+<script setup>
 import home from './.vitepress/components/home.vue';
 </script>
 
