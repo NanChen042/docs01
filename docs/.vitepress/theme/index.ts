@@ -7,10 +7,18 @@
  */
 
 import DefaultTheme from 'vitepress/theme';
-console.log(DefaultTheme);
+import "element-plus/dist/index.css";
 
 import './custom.css';
 
 export default {
-  ...DefaultTheme
+  ...DefaultTheme,
+  vue: {
+    // @vitejs/plugin-vue options
+  },
+  enhanceApp: async ({ app, router, siteData, isServer }) => {
+   /*  import("element-plus").then((module) => {
+      app.use(module);
+    }); */
+  },
 };

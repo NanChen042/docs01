@@ -29,6 +29,8 @@ const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   display: inline-block;
   cursor: pointer;
   border-radius: 2px;
+  color: var(--vp-c-brand-purple);
+
   line-height: 13px;
   font-size: 13px;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);

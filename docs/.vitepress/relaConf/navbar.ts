@@ -29,21 +29,33 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       {
         text: '👶 HarmonyOS 4.0',
-        link: '/column/Travel/harmony-os-4.0-series/HarmonyOS4.0系列——01、下载、安装、配置环境、搭建页面以及运行示例代码.md' // 表示docs/column/Travel/index.md
+        link: '/column/harmony-os-4.0-series/HarmonyOS4.0系列——01、下载、安装、配置环境、搭建页面以及运行示例代码.md', // 表示docs/column/Travel/index.md
+        target: '_blank',
+        rel: 'sponsored'
+      },
+      {
+        text: '👶 Threejs',
+        link: '/column/ThreeJS/three01场景搭建.md', // 表示docs/column/Travel/index.md
+        target: '_blank',
+        rel: 'sponsored'
       }
     ]
   },
   {
     text: '关于我',
     items: [
-      { text: 'Github', link: 'https://github.com/Jacqueline712' },
+      { text: 'Github', link: 'https://github.com/NanChen042' },
       {
         text: '掘金',
-        link: 'https://juejin.cn/user/3131845139247960/posts'
+        link: 'https://juejin.cn/user/1588130256005415'
       },
       {
-        text: '飞书社区',
-        link: 'https://pzfqk98jn1.feishu.cn/wiki/space/7193915595975491587?ccm_open_type=lark_wiki_spaceLink'
+        text: 'CSDN',
+        link: 'https://blog.csdn.net/nanchen_J?type=blog'
+      },
+      {
+        text: '51博客',
+        link: 'https://blog.51cto.com/u_15947040'
       }
     ]
   }

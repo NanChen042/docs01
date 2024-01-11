@@ -20,13 +20,21 @@
   }
   :root {
     --vp-c-brand: var(--vp-c-purple);
-    --vp-c-brand-light: var(--vp-c-purple-light);
-    --vp-c-brand-lighter: var(--vp-c-purple-lighter);
+    --vp-c-brand-purple: var(--vp-c-purple-dark);
+    --vp-c-brand-page-background: #fff;
+/*     --vp-c-brand-lighter: var(--vp-c-purple-lighter);
     --vp-c-brand-dark: var(--vp-c-purple-dark);
     --vp-c-brand-darker: var(--vp-c-purple-darker);
     --vp-button-brand-bg:var(--vp-c-purple-dark);
-    --vp-button-brand-hover-bg:var(--vp-c-purple-darker);
+    --vp-button-brand-hover-bg:var(--vp-c-purple-darker); */
     --vp-c-brand-1:var(--vp-c-purple-darker);
+    --vp-button-brand-bg:var(--vp-c-purple-dark);
+    --vp-button-brand-hover-bg:var(--vp-c-purple-darker);
+  }
+  .dark{
+    --vp-c-brand-purple: #fff;
+    --vp-c-brand-1:var(--vp-c-purple-light);
+    --vp-c-brand-page-background: var(--vp-c-purple-dark)
   }
   
   

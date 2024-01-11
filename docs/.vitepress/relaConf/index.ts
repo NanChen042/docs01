@@ -8,4 +8,3 @@
 
 export {nav} from './navbar';
 export {sidebar} from './sidebar';
-export {harmonyos} from './harmonyos';

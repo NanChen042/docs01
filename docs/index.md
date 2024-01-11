@@ -41,7 +41,8 @@ features:
     details: 真正的成功不在于你得到了什么，而是在于你成为了什么样的人。
 ---
 <!-- 自定义组件 -->
-<script setup>
+<script setup lang="ts">
+
 import home from './.vitepress/components/home.vue';
 </script>
 
