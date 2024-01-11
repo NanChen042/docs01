@@ -9,7 +9,7 @@ import { defineConfig } from 'vitepress'
 import { nav,sidebar } from './relaConf';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // base: '/docs/',
+  base: '/docs/',
   title: "blog-demo😶‍🌫️",
   description: "A VitePress Site",
   head:[['link',{rel:'icon',href: '/bitbug_favicon.ico'}],],
