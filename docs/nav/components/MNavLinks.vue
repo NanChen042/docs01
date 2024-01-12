@@ -1,17 +1,28 @@
 <script setup lang="ts">
-import MNavLink from './MNavLink.vue'
 
+import { computed } from 'vue'
+import { slugify } from '@mdit-vue/shared'
+
+import MNavLink from './MNavLink.vue'
 import type { NavLink } from './type'
 
-defineProps<{
+const props =defineProps<{
   title: string
   items: NavLink[]
 }>()
+
+const formatTitle = computed(() => {
+  console.log(props.title);
+  return slugify(props.title)
+})
 </script>
 
 <template>
+   <h2 v-if="title" :id="formatTitle" tabindex="-1">
+    {{ title }}
+    <a class="header-anchor" :href="`#${formatTitle}`" aria-hidden="true"></a>
+  </h2>
   <div class="m-nav-links">
-   
     <MNavLink
       v-for="{ icon, title, desc, link } in items"
       :key="link"
@@ -48,4 +59,5 @@ defineProps<{
     --gap: 20px;
   }
 }
+
 </style>

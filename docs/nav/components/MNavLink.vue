@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, defineProps } from "vue";
-
 import { NavLink } from "./type";
+import { slugify } from "@mdit-vue/shared";
 
 const props = defineProps<{
   icon?: NavLink["icon"];
@@ -9,6 +9,13 @@ const props = defineProps<{
   desc?: NavLink["desc"];
   link: NavLink["link"];
 }>();
+
+const formatTitle = computed(() => {
+  if (!props.title) {
+    return "";
+  }
+  return slugify(props.title);
+});
 
 const svg = computed(() => {
   if (typeof props.icon === "object") return props.icon.svg;
@@ -18,7 +25,7 @@ const svg = computed(() => {
 
 <template>
   <!-- trigger="click" -->
-  <el-tooltip  :content="desc" effect="customized">
+  <el-tooltip :content="desc" effect="customized">
     <a class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
       <article class="box">
         <div class="box-header">
@@ -26,7 +33,8 @@ const svg = computed(() => {
           <div v-else-if="icon && typeof icon === 'string'" class="icon">
             <img :src="icon" :alt="title" onerror="this.parentElement.style.display='none'" />
           </div>
-          <h6 v-if="title" class="title">{{ title }}</h6>
+          <!-- <h6 v-if="title" class="title">{{ title }}</h6> -->
+          <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
         </div>
         <p v-if="desc" class="desc">{{ desc }}</p>
       </article>
@@ -35,8 +43,8 @@ const svg = computed(() => {
 
 </template>
 <style>
-.el-popper span{
-  color:var(--vp-tooltip-color-before)
+.el-popper span {
+  color: var(--vp-tooltip-color-before);
 }
 .el-popper.is-customized {
   /* Set padding to ensure the height is 32px */
@@ -45,11 +53,11 @@ const svg = computed(() => {
 }
 
 .el-popper.is-customized .el-popper__arrow::before {
-  background:var(--vp-tooltip-bg-before);
+  background: var(--vp-tooltip-bg-before);
   right: 0;
-}</style>
+}
+</style>
 <style lang="scss" scoped>
-
 .vp-doc a {
   text-decoration: auto;
   &:hover {
