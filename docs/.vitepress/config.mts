@@ -42,6 +42,13 @@ export default defineConfig({
         message: "According to the information provided by the front desk staff",
         copyright: "Copyright © 2023-present Southern Wind",
       },
+      darkModeSwitchLabel: '外观',
+      returnToTopLabel: '返回顶部',
+      lastUpdatedText: '上次更新',
+      docFooter: {
+        prev: '上一篇',
+        next: '下一篇',
+      },
   },
   lastUpdated:true,
 

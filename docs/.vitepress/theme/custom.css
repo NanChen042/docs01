@@ -3,7 +3,7 @@
 
 /* Color Base */
 :root {
-
+  --vp-c-bg-alt: #f6f6f7;
   --vp-c-purple: #;
   --vp-c-purple-light: #c19ee0;
   --vp-c-purple-lighter: #d2b7e5;
@@ -37,9 +37,12 @@
   --vp-tooltip-bg:linear-gradient(90deg, #A06CD5, #EC69BD,#EC69BD,#A06CD5);
   --vp-tooltip-bg-before:linear-gradient(45deg,#EB69BD,#EB69BD );
   --vp-tooltip-color-before:#fff;
+  --vp-shadow-2: 0 3px 12px rgba(0, 0, 0, .07), 0 1px 4px rgba(0, 0, 0, .07);
 }
 
 .dark {
+  --vp-c-bg-alt: #161618;
+  --vp-c-bg-soft: #202127;
   --vp-tooltip-bg-before:linear-gradient(45deg,#252529,#27262B );
   --vp-tooltip-bg:linear-gradient(90deg, #000, #4B4A54);
   --vp-tooltip-color-before:#fff;

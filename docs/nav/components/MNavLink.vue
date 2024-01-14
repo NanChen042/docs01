@@ -11,7 +11,12 @@ const props = defineProps<{
 }>();
 
 const formatTitle = computed(() => {
+ 
+  
   if (!props.title) {
+    return "";
+  }
+  if (!props.desc) {
     return "";
   }
   return slugify(props.title);
@@ -25,8 +30,9 @@ const svg = computed(() => {
 
 <template>
   <!-- trigger="click" -->
-  <el-tooltip :content="desc" effect="customized">
-    <a class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
+  <client-only>
+  <el-tooltip :content="desc?desc:'待更新'" effect="customized">
+    <a  class="m-nav-link" :href="link" target="_blank">
       <article class="box">
         <div class="box-header">
           <div v-if="svg" class="icon" v-html="svg"></div>
@@ -40,7 +46,7 @@ const svg = computed(() => {
       </article>
     </a>
   </el-tooltip>
-
+</client-only>
 </template>
 <style>
 .el-popper span {
@@ -67,12 +73,15 @@ const svg = computed(() => {
 .m-nav-link {
   display: block;
   border: 1px solid var(--vp-c-bg-soft);
+  background-color: var(--vp-c-bg-alt);
   border-radius: 8px;
   height: 100%;
   cursor: pointer;
   transition: all 0.3s;
   &:hover {
     background-color: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-brand-1);
+    box-shadow: var(--vp-shadow-2);
   }
 
   .box {
@@ -96,7 +105,7 @@ const svg = computed(() => {
     width: 48px;
     height: 48px;
     font-size: 24px;
-    background-color: var(--vp-c-mute);
+    background-color: var(--vp-c-default-soft);
     transition: background-color 0.25s;
     :deep(svg) {
       width: 24px;
@@ -109,6 +118,7 @@ const svg = computed(() => {
   }
 
   .title {
+    width: 200px;
     overflow: hidden;
     flex-grow: 1;
     white-space: nowrap;
@@ -116,6 +126,9 @@ const svg = computed(() => {
     line-height: 48px;
     font-size: 16px;
     font-weight: 600;
+  }
+  .el-link__inner{
+    display: block;
   }
 
   .desc {

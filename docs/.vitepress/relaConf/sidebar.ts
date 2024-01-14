@@ -26,6 +26,9 @@ export const sidebar: DefaultTheme.Sidebar = {
         {
           text: '05、状态管理之@Prop、@Link、@Provide、@Consume，以及@Watch装饰器',
           link: '/column/harmony-os-4.0-series/HarmonyOS4.0系列——05、状态管理之@Prop、@Link、@Provide、@Consume，以及@Watch装饰器'
+        },    {
+          text: '06、渲染之条件渲染、循环渲染以及懒加载渲染',
+          link: '/column/harmony-os-4.0-series/HarmonyOS06.md'
         },
 
       ]

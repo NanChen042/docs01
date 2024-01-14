@@ -2,7 +2,8 @@
 # 提供三种布局，doc、page和home
 # 官方文档相关配置：https://vitepress.dev/reference/default-theme-layout
 layout: home
-home: true
+layoutClass: 'm-home-layout'
+# home: true
 
 # 官方文档相关配置：https://vitepress.dev/reference/default-theme-home-page
 title: SW
@@ -52,5 +53,6 @@ import home from './.vitepress/components/home.vue';
 
 <home />
 <style>
+/*爱的魔力转圈圈*/
 
 </style>
